@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Flux - Multipurpose HTML Template</title>
+
+<!-- ////////////////////////////////// -->
+<!-- //     Retina Bookmark Icon     // -->
+<!-- ////////////////////////////////// -->
+<link rel="apple-touch-icon-precomposed" href="apple-icon.png"/>
+
+<!-- ////////////////////////////////// -->
+<!-- //     Retina Bookmark Icon     // -->
+<!-- ////////////////////////////////// -->
+<link rel="apple-touch-icon-precomposed" href="apple-icon.png"/>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Stylesheets Files       // -->
+<!-- ////////////////////////////////// -->
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/media.css"/>
+<link rel="stylesheet" href="css/revolution.css" media="screen"/>
+<link rel="stylesheet" href="css/media-slideshow.css" media="screen"/>
+<link rel="stylesheet" href="css/noscript.css" media="screen,all" id="noscript"/>
+
+<!-- ////////////////////////////////// -->
+<!-- //     Google Webfont Files     // -->
+<!-- ////////////////////////////////// -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,900"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico"/>
+
+<!-- ////////////////////////////////// -->
+<!-- //        Favicon Files         // -->
+<!-- ////////////////////////////////// -->
+<link rel="shortcut icon" href="images/favicon.ico"/>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/gmaps.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/jquery.easing-1.3.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/jquery.themepunch.plugins.min.js"></script>
+<script src="js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+<script src="js/jquery.fancyboxe45f.js?v=2.0.6"></script>
+<script src="js/jquery.fancybox-media2c70.js?v=1.0.3"></script>
+<script src="js/jquery.donutchart.js"></script>
+<script src="js/jflickrfeed.min.js"></script>
+<script src="js/jquery.twitter.js"></script>
+<script src="js/accordion-functions.js" ></script>
+<script src="js/theme-functions.js"></script>
+<script src="js/jquery.retina.js"></script>
+<script>
+$(document).ready(function() {
+//Retina Image
+$('img.retina').retina('@2x');
+
+//Map Jquery
+var map = new GMaps({
+    el: '#map',
+    lat: 40.81215,
+    lng: -73.92773,
+    zoom: 14,
+	zoomControl : true,
+    zoomControlOpt: {
+        style : 'SMALL',
+        position: 'TOP_LEFT'
+    },
+    panControl : false,
+	streetViewControl : false,
+	mapTypeControl: false,
+	overviewMapControl: false 
+  });
+
+    map.addMarker({
+      lat: 40.81150,
+      lng: -73.92782,
+      icon: "images/map-marker.png"
+    });
+
+  var styles = [
+     {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+            { lightness: 100 },
+            { visibility: "simplified" }
+      ]
+    }, {
+        featureType: "road",
+        elementType: "labels",
+        stylers: [
+            { visibility: "off" }
+      ]
+    }
+  ];
+        
+  map.addStyle({
+      styledMapName:"Styled Map",
+      styles: styles,
+      mapTypeId: "map_style"  
+  });
+  
+  map.setStyle("map_style");
+});
+</script>
+
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<body>
+	<!-- header start here -->
+	<header>
+    
+    	<!-- top info start here -->
+    	<div id="top-info">
+        	<div class="row">
+            	<div class="twelve column">
+                    <!-- logo start here -->
+                    <div id="logo">
+                        <a href="index-2.html"><img src="images/logo.png" alt="main-logo" class="retina"/></a>
+                    </div>           
+                    <!-- logo end here -->
+                    
+                    <div id="top-socials">
+                        <ul>                                
+                            <li class="facebook-color"><a href="#"><i class="social-facebook"></i></a></li>
+                            <li class="twitter-color"><a href="#"><i class="social-twitter"></i></a></li>
+                            <li class="dribbble-color"><a href="#"><i class="social-dribbble"></i></a></li>
+                            <li class="googleplus-color"><a href="#"><i class="social-googleplus"></i></a></li>
+                            <li class="linkedin-color"><a href="#"><i class="social-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top info end here -->        
+        
+        <div id="mainmenu-wrapper">
+            <div class="left-menu">
+                    
+                <!-- navigation start here -->
+                <nav id="mainmenu">
+                    <ul id="menu">
+                        <li class="dropdown"><a href="index-2.html">Home</a><span class="desc-menu">It's our home</span>
+                            <ul> 
+                                <li><a href="index-layout2.html">home layout 2</a></li>
+                                <li><a href="index-layout3.html">home layout 3</a></li>
+                                <li><a href="index-layout4.html">home layout 4</a></li>
+                                <li><a href="index-layout5.html">home layout 5</a></li>
+                                <li><a href="index-layout6.html">home layout 6</a></li>
+                                <li><a href="index-layout7.html">home layout 7</a></li>
+                                <li><a href="index-layout8.html">home layout 8</a></li>
+                            </ul>
+                        </li>                                                   
+                        <li class="dropdown"><a href="#">Elements</a><span class="desc-menu">Sample slogan</span>
+                        	<ul> 
+                                <li><a href="column.html">column</a></li>
+                                <li><a href="tables.html">tables</a></li>
+                                <li><a href="button-list.html">button &amp; list</a></li>
+                                <li><a href="icons.html">icon list</a></li>
+                                <li><a href="icon-use.html">icon use</a></li>
+                                <li><a href="typography.html">typography</a></li>
+                                <li><a href="note-promo.html">note &amp; promo box</a></li>
+                                <li><a href="tab-accordion.html">tab &amp; accordion</a></li>
+                                <li><a href="alert-progress.html">alert &amp; progress</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Pages</a><span class="desc-menu">Sample slogan</span>
+                        	<ul> 
+                                <li><a href="about.html">about us</a></li>
+                                <li><a href="services.html">our services</a></li>
+                                <li><a href="pricing-plan.html">pricing plan</a></li>
+                                <li><a href="testimonials.html">client testimonials</a></li>
+                                <li><a href="team.html">our team</a></li>
+                                <li><a href="sitemap.html">flux sitemap</a></li>
+                                <li><a href="faq.html">faq page</a></li>
+                                <li><a href="404.html">404 error</a></li>
+                            </ul>
+                        </li> 
+                        <li class="dropdown"><a href="#">Portfolio</a><span class="desc-menu">Sample slogan</span>
+                            <ul> 
+                                <li><a href="portfolio-2col.html">portfolio 2 column</a></li>
+                                <li><a href="portfolio-3col.html">portfolio 3 column</a></li>
+                                <li><a href="portfolio-4col.html">portfolio 4 column</a>
+                                    <ul> 
+                                        <li><a href="#">dropdown level 2</a></li>
+                                        <li><a href="#">dropdown level 2</a></li>
+                                        <li><a href="#">dropdown level 2</a>
+                                            <ul> 
+                                                <li><a href="#">dropdown level 3</a></li>
+                                                <li><a href="#">dropdown level 3</a></li>
+                                                <li><a href="#">dropdown level 3</a></li>    	
+                                            </ul>
+                                        </li>    	
+                                    </ul>
+                                </li>    	
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blog</a><span class="desc-menu">Sample slogan</span></li>
+                        <li class="selected"><a href="contact.html">Contact</a><span class="desc-menu">Sample slogan</span></li>
+                    </ul>
+                </nav>
+                <!-- navigation end here --> 
+                    
+            </div>
+            
+            <div class="right-menu" id="top-search">
+                <a class="trigger" href="#"><i class="icon-search"></i></a>
+                <div class="search-panel">
+                    <ul>
+                        <li>
+                        <form id="search" action="#" method="get">
+                            <fieldset class="search-fieldset">
+                                <input type="text" id="search-form" value="type and hit enter" onblur="if (this.value == ''){this.value = 'type and hit enter'; }" onfocus="if (this.value == 'type and hit enter') {this.value = ''; }" />
+                            </fieldset>      						
+                        </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                
+    </header>
+    <!-- header end here -->
+    
+    <!-- pagetitle start here -->
+    <section id="pagetitle-container">
+    	<div class="row">
+        	<div class="twelve column">
+            	<h1>Contact Us</h1>
+                <h3>If you want to talk to us about your project, we would love to hear from you.</h3>
+            </div>
+            <div class="twelve column breadcrumb">
+            	<ul>
+                    <li><a href="index-2.html">Home</a></li>
+                    <li class="current-page"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>	        
+    </section>
+    <!-- pagetitle end here -->
+      
+    <!-- content section start here -->
+    <section class="content-wrapper">
+    	<div class="row">
+        	<div class="four column">    
+            	<h3 class="title-line margin-bottom2"><span>Our Office</span></h3>
+                <ul class="no-bullet list-line-contact">
+                	<li>
+                    	<div class="flatborder left">
+                            <i class="flat-clock small"></i>
+                        </div>
+                        <h6>Office Hours</h6>
+                        <p class="text-overflow">Monday to Friday / 7:00 - 18:00<br/>Saturday / 9:00 - 15:00</p>
+                    </li>
+                    	
+                    <li>
+                    	<div class="flatborder left">
+                            <i class="flat-map small"></i>
+                        </div>
+                        <h6>Contact Info</h6>
+                        <p class="text-overflow">25 Silver Avenue<br/>Jakarta, JKT, 12345. Indonesia</p>
+                    </li>
+                    
+                    <li>
+                    	<div class="flatborder left">
+                            <i class="flat-phone2 small"></i>
+                        </div>
+                        <h6>Phone &amp; Fax</h6>
+                        <p class="text-overflow">Phone : (111) 234 5678 <br/>Fax : (111) 432 5678</p>
+                    </li>
+                </ul>                             
+            </div>
+            
+        	<div class="eight column">
+                <p class="lead">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum neque porro.</p>
+            	<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecati cupiditate non providen anim id est laborum voluptas sit aspernatur aut odit aut fugit corporis suscipit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            
+                <div id="contact-form-area">
+                    <!-- Contact Form Start //-->
+                    <form action="#" id="contactform"> 
+                        <fieldset> 
+                        <label>Name <em>*</em></label>                           
+                        <input type="text" name="name" class="textfield" id="name" value="" /> 
+                        <label>E-mail <em>*</em></label> 
+                        <input type="email" name="email" class="textfield" id="email" value="" />                        
+                        <label>Subject <em>*</em></label>
+                        <input type="text" name="subject" class="textfield" id="subject" value="" />
+                        <label>Message <em>*</em></label>
+                        <textarea name="message" id="message" class="textarea" cols="2" rows="6"></textarea>
+                        <div class="clear"></div> 
+                        <label>&nbsp;</label>
+                        <button type="submit" name="submit" class="buttoncontact" id="buttonsend">Submit</button>
+                        <span class="loading" style="display: none;">Please wait..</span>
+                        <div class="clear"></div>
+                        </fieldset> 
+                    </form>
+                    <!-- Contact Form End //-->
+                </div>	
+            </div>     
+        </div>              
+    </section>
+    <!-- content section end here -->
+    
+    <!-- bottom content start here -->
+    <section id="bottom-content">
+    	<div id="map"></div>      
+    </section>
+    <!-- bottom content end here -->
+    
+    <!-- footer start here -->
+    <footer>   
+        <div class="row">
+        	<div class="nine column">
+            	<h6>Contact Information</h6>
+                <div class="say-hello">
+                	<h4><a href="contact.html">Holla!</a></h4>
+                </div>
+                <ul class="footer-address no-bullet">
+                	<li class="address">25 Silver Avenue. Jakarta, JKT, 12345. IND</li>
+                    <li class="phone">(621) 123 4567</li>
+                    <li class="email"><a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></li>
+                </ul>
+                
+                <ul class="footer-link no-bullet">
+                	<li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>		
+            </div>
+            
+            <div class="three column">
+            	<img src="images/logo.png" alt="" class="footer-logo retina" />
+                <p>Temporibus autem quibusdam officiis debitis aut rerum necessitatibus saepe</p>
+                <p>&copy; 2013 by Indonez. All Rights Reserved. </p>	
+            </div>       
+        </div>
+    </footer>
+    <!-- footer end here -->
+
+<script>$('#noscript').remove();</script>
+</body>
+</html>
